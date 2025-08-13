@@ -1,0 +1,137 @@
+:root{
+  --bg: #F2F2F2;
+  --purple-1: #7765DA;
+  --purple-2: #5767D0;
+  --peach: #FFD0CE;
+  --text: #373737;
+  --muted: #6E6E6E;
+  --card-bg: #fff;
+  --box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin:0; background: var(--bg); color:var(--text); }
+
+.app {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Centered card */
+.center-card {
+  width: 727px;
+  max-width: calc(100% - 40px);
+  height: 353px;
+  background: var(--card-bg);
+  border-radius: 9px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: var(--box-shadow);
+  padding: 28px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Title lines */
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom:4px;
+}
+.subtitle {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 18px;
+  text-align:center;
+  max-width: 560px;
+}
+
+/* Oval button (continue etc) */
+.oval-btn {
+  width: 233.934px;
+  height: 57.5806px;
+  border-radius: 34px;
+  border: none;
+  background: linear-gradient(90deg,var(--purple-1),var(--purple-2));
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  cursor:pointer;
+  box-shadow: 0 8px 20px rgba(119,101,218,0.2);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* role buttons */
+.role-row { display:flex; gap:18px; align-items:center; }
+.role-card {
+  width: 280px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+  cursor:pointer;
+}
+.role-card .r-title { font-size: 16px; font-weight:700; }
+.role-card .r-desc { color:var(--muted); font-size:12px; margin-top:8px; }
+
+/* form controls */
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #E6E6E6;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.row { display:flex; gap:10px; width:100%; }
+.half { flex:1; }
+
+/* poll option list */
+.option {
+  width:100%;
+  padding: 10px 12px;
+  border-radius:8px;
+  border:1px solid #EEE;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:#FFF;
+}
+.option .opt-text { font-weight:600; color:var(--text); }
+.option .bar {
+  height:16px;
+  width: 220px;
+  background:#f0f0f0;
+  border-radius: 8px;
+  overflow:hidden;
+}
+.bar-inner { height:100%; background: linear-gradient(90deg,var(--purple-1),var(--purple-2)); }
+
+/* smaller text */
+.small { font-size:12px; color:var(--muted); }
+
+/* layout for teacher/student main */
+.main-grid {
+  display:flex;
+  gap:18px;
+  width:100%;
+  align-items:flex-start;
+  justify-content:center;
+}
+
+/* mobile */
+@media (max-width:800px){
+  .center-card { width: calc(100% - 32px); height:auto; padding:18px; }
+  .role-row{flex-direction:column;}
+}
+
+
